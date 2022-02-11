@@ -19,3 +19,4 @@ nume.forEach(multi);
 console.log(sum);
 console.log(k);
 console.log(num);
+
