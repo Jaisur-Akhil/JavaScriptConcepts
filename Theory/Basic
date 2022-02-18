@@ -1,0 +1,73 @@
+Javascript is -
+
+High Level - We dont have to manage memories .C is manual .
+Prototype based object oriented - oops every thing in js is object except premitive values number , string . -- prototype example - Array - cont arr = [1,2,3,4,5,,6] then arr.push(9) - this already have a blue print with all the functionality and struturing --Our array Inherts method from prototype
+Multiparadigm - approach and mindset to structure a code a) procedural , b) oops , c) Functional Programming thus flexible and versatile 
+Interpreted or JIT compiled - 0, 1 - code to machine code - inside js engin 
+Dynamic - dynamically type - no need to mention datatype , automatic analyse type
+
+garbage collected porgramming language - clean the memory so we dont clog and no unnecessary memory is used
+First class funtion  - functions a kind of paradigm . passing funtion in another function
+Non blocking event loop concurrany model -
+Single Threaded - handles one thing at the time 
+
+concurrancy model - How js handle multiple task > 
+thread - set of instruction for cpu 
+long task then clogs > thus we want non blocking behaviour > event loop 
+
+event loop take those long running task 
+executes them in background 
+puts them back in main thread once they are finished
+
+
+
+Js engin - its a computer program 
+Executing Js program is what js engin does 
+Google V8 - Engin - Node too 
+
+call stack & Heap 
+call stack - execution Context > where our code is executed 
+Heap - Object in memory > Where objects are stored
+
+compile & interpretation 
+compilation - entire code is executed in processor at a time 
+interpretation - runs the source code and run code line by line 
+
+how the code is executed 
+modern JS engin 
+js uses JIT - source code - Machine code > execution program running 
+
+code -> parsing (AST - seperating each line of code - savinf each part of code in tree format in a structured way - check if any syntax error (variable declaration is taken by AST , has to do nothing with dom . its a entire representaion code for JIT ))
+    > compiled into machine code > executed (call stack )right away
+    > optimization (morden engin) - optimization of code - it happens in the special threads
+
+
+Runtime in brower - Complete box with everything you need for js 
+
+Js Engine - Heap + Call stack 
+
++ 
+
+Web Api - Timer , fetch , windows , DOM (eg - console.log)
+functionality to communicate with js . but are not js actually its c, c++ from brwser 
+
++
+
+call back queues-  event happens -  click , timer 
+
+
+
+------
+Execution context - Compilation > in stack > Execution 
+global execution context - top level code 
+
+exection of top level code (inside global EC)
+
+Execution of function and waiting for call back 
+
+Execution Context contains - 1. Variable environments (variables , function , args objects )
+                             2. Scope Chain 
+                             3. This Key word 
+
+Arrow function does not contain its this key 
+    

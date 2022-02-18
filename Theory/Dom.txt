@@ -1,0 +1,21 @@
+Docment object Model 
+Structured representation of HTML Document
+Allows JS to access HTML elements and styles to manupulate them 
+
+Its a tree type Structured
+each html element is a leaf 
+child element
+parent element
+sibling element 
+
+Document - root > serves as an entry point 
+document.querySelector()
+
+html > head + body (sibling) > more elements more childerens 
+
+Dom is for browers 
+Browers support web api (Application Programming Interface )
+these web api communicate with Js
+
+
+Emoji in html - windows + .
