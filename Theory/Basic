@@ -70,4 +70,22 @@ Execution Context contains - 1. Variable environments (variables , function , ar
                              3. This Key word 
 
 Arrow function does not contain its this key 
-    
+
+
+
+
+    ------------------------------
+
+    Scope - Where do variable live 
+1. Global Scope 
+2. Block Scope - everything with {} . only for let and const  can be if statement can be for loop .
+3. Function Scope / Local scope 
+
+var declared in function scope will be functioned scope . 
+var declared in blockscope can we access outside block 
+
+reference error 
+
+scope of variable is the entire region where variable can be accessed 
+
+variable can look up in scope chain
