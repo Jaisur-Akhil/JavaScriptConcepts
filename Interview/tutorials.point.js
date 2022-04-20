@@ -1,18 +1,41 @@
 /**
  * /*
- * JavaScript is a lightweight, interpreted programming language with object-oriented capabilities that allows you to build interactivity into otherwise static HTML pages.
+ * 
+ * document.writeln(str.charAt(4));  === console.log(...) 
+ * 
+ * JavaScript was initially called Mocha
+ * 
+ * 
+ * 
+ * JavaScript is a client-side and server-side scripting language inserted into HTML pages and is understood by web browsers.
+ * ------------
+ * JavaScript is a scripting language JavaScript is a lightweight, interpreted programming language with object-oriented capabilities that allows you to build interactivity into otherwise static HTML pages.
  *
+1. Speed: JavaScript is very fast because it is executed on the client side.
+2. Simplicity: JavaScript is relatively simple and easy to learn.
+3. Versatility: means having a wide variety of skills. JavaScript can be used in a wide variety of applications regardless of the file extension of web pages.
+4. Server Load: As JavaScript executes on the client side it reduce the server load.
+Feedback to the visitors is immediate
+
+
+
  * disadvantage of Js
+
+1. Security: As JavaScript executes on the client side it can be used to exploit the application.
+2. UI inconsistency: Sometimes JavaScript is interpreted differently by different browsers resulting in the inconsistent UI.
+
  * We can not treat JavaScript as a full fledged programming language. It lacks the following important features −
  *
  * Client-side JavaScript does not allow the reading or writing of files. This has been kept for security reason.
  *
  * JavaScript can not be used for Networking applications because there is no such support available.
  *
- * JavaScript doesn't have any multithreading or multiprocess capabilities.
+ * JavaScript doesn't have any supoort multithreading or multiprocess capabilities.
  *
  * @format
- 
+//return type of null is object 
+
+// The == operator checks equality only whereas === checks equality and data type.
 
 //Create an Object in js
 
@@ -135,4 +158,90 @@ console.log(b);
 
 const c = [1, 2, 3, 4, 5, 6];
 console.log(c.indexOf(3));
+
+//cookie create
+document.cookie = 'key1= value1; key2 = value2 ; expires = date';
+document.cookie = 'key1 = value1; key2 = value2; expires = date';
+
+
+//redirect a url in javascript
+<html>
+  <head>
+    <script type=text/javascript> windows.location = "url"</script>
+  </head>
+</html>;
+
+
+//data types - premmitive & Non premitive
+//Premitive - string , number , boolean , bigint , undefined , null , symbol
+//Non Premitive - object , array .
+
+var obj = { name: 'akhil', age: 24 };
+var arr = [12, 34, 56, 78];
+console.log(10 + 20 + '30');
+console.log('10' + 20 + 30); // it feels everything is string
+
+//event.preventDefault() , event.stopPropagation
+// In JavaScript, the event.preventDefault() method is used to prevent the default behavior of an element.
+// On the other hand, the event.stopPropagation() method is used to stop the propagation of an event or stop the event from occurring in the bubbling or capturing phase.
+
+//This is a three-dimensional array. - var myArray = [[[]]];
+
+//View State , Session state
+//"View state" is specific to a page in a session whereas "Session state" is specific to a user or browser that can be accessed across all pages in the web application.
+
+//popup box in js - alert , confirm , prompt
+
+// OS of the client machine using JavaScript - navigator.appVersion
+
+//JavaScript debugger keyword sets the breakpoint through the code itself. The debugger stops the execution of the program at the position it is applied. Now, we can start the flow of execution manually. If an exception occurs, the execution will stop again on that particular line.. For example:
+
+const de_bug = () => {
+  let x = 20;
+  let y = 30;
+  z = x + y;
+  debugger
+  console.log(z);
+//   console.log(a);
+};
+de_bug();
+
+
+'use strict'; // throws error when strict , it is used to avoid errors and apply few strict rules for better coding practice and prevent future errors
+x = 20;
+console.log(x);
+
+
+// '', 0, null, undefined, NaN, false - falsy values
+
+// Hoisting is the default behavior of JavaScript where all the variable and function declarations are moved on top. And we dont get any error of declaration
+hoistedVariable = 12;
+console.log(hoistedVariable); // outputs 12 even when the variable is declared after it is initialized
+var hoistedVariable;
+
+
+
+// The delete keyword is used to delete the property as well as its value.
+var student = { age: 20, batch: 'ABC' };
+console.log(student.age, 'before delete');
+delete student.age;
+console.log(student.age, 'after delete');
 */
+
+// escape characters
+// Escape characters (Backslash) is used when working with special characters like single quotes, double quotes, apostrophes, and ampersands. Place backslash before the characters to make it display.
+
+// console.log('I am "full stack" developer');
+
+try {
+  let x = 'a';
+  let y = 'b';
+  let p = x + y;
+  //   let v = b + y;
+  console.log('p', p);
+  //   console.log('v', v);
+} catch {
+  console.log('Some error occured');
+} finally {
+  console.log('Just kidding');
+}
