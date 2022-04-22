@@ -23,14 +23,14 @@ Feedback to the visitors is immediate
 
 1. Security: As JavaScript executes on the client side it can be used to exploit the application.
 2. UI inconsistency: Sometimes JavaScript is interpreted differently by different browsers resulting in the inconsistent UI.
-
+3.  JavaScript doesn't have any supoort multithreading or multiprocess capabilities.
  * We can not treat JavaScript as a full fledged programming language. It lacks the following important features −
  *
  * Client-side JavaScript does not allow the reading or writing of files. This has been kept for security reason.
  *
  * JavaScript can not be used for Networking applications because there is no such support available.
  *
- * JavaScript doesn't have any supoort multithreading or multiprocess capabilities.
+ *
  *
  * @format
 //return type of null is object 
@@ -94,11 +94,8 @@ Pending
 Fulfilled
 Rejected
 The Promise object supports two properties: state and result.
-
 While a Promise object is "pending" (working), the result is undefined.
-
 When a Promise object is "fulfilled", the result is a value.
-
 When a Promise object is "rejected", the result is an error object.
 
 
@@ -159,10 +156,16 @@ console.log(b);
 const c = [1, 2, 3, 4, 5, 6];
 console.log(c.indexOf(3));
 
-//cookie create
+//cookie 
+
+ cookie is a piece of data stored on your computer to be accessed by your browser. You also might have enjoyed the benefits of cookies knowingly or unknowingly. Have you ever saved your Facebook password so that you do not have to type it every time you try to login? If yes, then you are using cookies. Cookies are saved as key/value pairs.
+
+document.cookie = "cookiename=cookievalue"
 document.cookie = 'key1= value1; key2 = value2 ; expires = date';
 document.cookie = 'key1 = value1; key2 = value2; expires = date';
+document.cookie = "cookiename=cookievalue; expires= Thu, 21 Aug 2014 20:00:00 UTC"
 
+To delete a cookie, you just need to set the cookie’s value to empty and set the value of expires to a passed date.
 
 //redirect a url in javascript
 <html>
@@ -207,9 +210,17 @@ const de_bug = () => {
 de_bug();
 
 
+//Strict Mode
+//trict Mode adds certain compulsions to JavaScript. Under the strict Mode, JavaScript shows errors for a piece of code, which did not show an error before, but might be problematic and potentially unsafe. Strict Mode also solves some mistakes that hamper the JavaScript engines from working efficiently.
+
+
 'use strict'; // throws error when strict , it is used to avoid errors and apply few strict rules for better coding practice and prevent future errors
 x = 20;
 console.log(x);
+
+//The onload function is not run until all the information on the page is loaded. This leads to a substantial delay before any code is executed.
+
+onDocumentReady loads the code just after the DOM is loaded. This allows early manipulation of the code.
 
 
 // '', 0, null, undefined, NaN, false - falsy values
@@ -226,7 +237,7 @@ var student = { age: 20, batch: 'ABC' };
 console.log(student.age, 'before delete');
 delete student.age;
 console.log(student.age, 'after delete');
-*/
+
 
 // escape characters
 // Escape characters (Backslash) is used when working with special characters like single quotes, double quotes, apostrophes, and ampersands. Place backslash before the characters to make it display.
@@ -245,3 +256,82 @@ try {
 } finally {
   console.log('Just kidding');
 }
+
+// Blur function : Blur function is used to remove the focus from the specified object.
+
+// variable typing
+let i;
+i = 8; // assigns a number to variable and then assign a string to same variable
+i = 'i am variable typing';
+console.log(i);
+
+
+// web garden and a web farm?
+//Both web-garden and web-farm are web hosting systems. The only difference is that web-garden is a setup that includes many processors in a single server. At the same time,web-farm is a larger setup that uses more than one server.
+
+
+
+//deferred scripts 
+//The HTML code’s parsing during page loading is paused by default until the script has not stopped executing. If the server is slow or the script is particularly heavy, then the web page is delayed.
+
+//While using Deferred, scripts delays execution of the script till the time the HTML parser is running. This reduces the loading time of web pages, and they get displayed faster.
+
+
+//Error
+//run time error  -illegal operations - div by zero 
+//load time error -during loading of plage - syntatical error  
+// logical error - synatatically correct ode which fails to fullfil require task - infinte loop 
+
+
+
+//var uri="my test.asp?name=ståle&car=saab";
+// document.write(encodeURI(uri)+ "<br>");
+// document.write(decodeURI(uri));
+
+//ECMA Script is like rules and guidelines, while Javascript is a scripting language used for web development.
+
+//JavaScript can access all the elements in a web page using the Document Object Model (DOM). The web browser creates a DOM of the webpage when the page is loaded.document.getElementById("one").innerHTML
+
+var set1 = new Set(['js', 'mongo', 'nodejs', 'react', 'reactNative']);
+var set2 = new Set(['js', 'mongo', 'nodejs', 'react', 'reactNative']);
+var set3 = new Set(['js', 'mongo', 'nodejs', 'react', 'reactNative']);
+
+set1.add('html');
+set1.add('css');
+
+console.log(set1);
+
+set2.delete('js', 'mongo');
+console.log(set2);
+
+set3.clear();
+console.log(set3);
+
+
+const fruits = new Map([
+  ['first', 1],
+  ['second', 2],
+  ['third', 3],
+]);
+
+const a = fruits.get('first');
+console.log(fruits.set('fourth', 4));
+console.log(a);
+console.log(fruits.size, ' size ');
+console.log(fruits.delete('third'));
+console.log(fruits);
+console.log(fruits.has('second'));
+*/
+
+// let usefetch = fetch('https://jsonplaceholder.typicode.com/todos/1')
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+const axios = require('axios');
+axios.get('https://jsonplaceholder.typicode.com/todos/1').then((resp) => {
+  console.log(resp.data);
+});
+
+fetch('https://jsonplaceholder.typicode.com/todos/1').then((response) =>
+  console.log(json)
+);
