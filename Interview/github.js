@@ -244,4 +244,151 @@ const birthday = () => {
   BirthdayBoy();
 };
 
-birthday();
+// birthday();
+
+// --- class in es6 ---
+
+class Order {
+  constructor(id) {
+    this.id = id;
+  }
+
+  getid() {
+    console.log(`This is the order id ${this.id}`);
+  }
+}
+
+const OrderObj = new Order('12xy');
+// OrderObj.getid();
+
+//destructuring
+
+const dogs = ['hem', 'Jacob'];
+const [dog1, dog2] = dogs;
+// console.log(dog1);
+// console.log(dog2);
+
+// es5 vs es6
+// var    ||   const and let
+//        || destructuring of object/array
+// {'' }  || ` ${}` backtick template literal
+// function (dynamic) || Arrow fuction (lexical)
+//        || spread [...a to  an array]
+//        || Rest [add unlimited arguments to function]
+//        || IIFE - (()=>{})()   (function(){})()
+//        || Set - add(val) delete(val) entries clear
+
+//var let const
+/*
+"Let and Const are introduced in ES6 .Earlier ,variables in JS are declared with var Keyword
+var was function scoped where let and const is block scope 
+var can be redeclared and updated but let cannot be redecLared but can be updated
+Const are the variables which cannot be declared or updated .If once a value is declAred it cannot be updated
+
+*/
+
+// array map
+
+let arrEx = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let mapEx = arrEx.map((multi) => console.log(multi * 2));
+
+let filterEx = arrEx.filter((x) => x % 2);
+// console.log(filterEx);
+
+//Spread Operator
+
+let spread1 = [1, 2, 3, 4, 5, 6];
+let spread2 = [...spread1, 7, 8, 9, 10];
+// console.log(spread2);
+
+//Rest
+
+let r = (x, y) => {
+  let sum = x + y;
+  console.log(sum);
+};
+r(4, 8);
+
+let rest = (...y) => {
+  let sum = 0;
+  for (let a of y) {
+    sum = sum + a;
+  }
+  console.log(sum);
+};
+
+// rest(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+
+// ----- for OF ------- for Array
+const animal = ['horse1', 'horse2', 'Horse3', 'Horse4'];
+for (const A of animal) {
+  // console.log(animal);
+  // console.log(A);
+}
+
+// -------- for IN .......... for objects to iterate propertys
+
+const Employee = {
+  name: 'akhil',
+  age: 98,
+  email: 'a2244@gmail.com',
+  address: 'India , Maharashtra',
+  DC: 'Bhubaneshwar',
+  Weekends: 'Dubai',
+};
+
+for (let k in Employee) {
+  // console.log(k);
+  // console.log(Employee[k]);
+  // console.log(` ${k} =>    ${Employee[k]}`);
+}
+
+//call back hell
+
+const add = (x, y, callback) => {
+  setTimeout(() => {
+    callback(x + y);
+  }, 3000);
+};
+
+add(1, 2, (sum) => {
+  add(3, sum, (sum2) => {
+    add(4, sum2, (sum3) => {
+      add(5, sum3, (sum4) => {
+        console.log(`this is call back hell ${sum4}`);
+      });
+    });
+  });
+});
+
+const promiseAdd = (x, y) => {
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(x + y);
+    }, 2000);
+  });
+};
+
+promiseAdd(1, 2).then((sum1) => {
+  return promiseAdd(sum1, 3).then((sum2) => {
+    return promiseAdd(sum2, 4).then((sum3) => {
+      console.log('this is Summ ' + sum3);
+    });
+  });
+});
+
+/*Babel is a JavaScript transpiler that converts ES6JavaScript into old ES5 JavaScript that can run in any browser.
+Every major release, the syntactical sugar is being added to JavaScript, but that is not immediately supported by Browser so to overcome this babel is used
+
+In
+
+// ES2020 nullish coalescing
+function Hello(val) {
+return val ?? “Hello world”;
+}
+Out
+
+function Hello(val) {
+return val != null ? val : “Hello world”;
+}
+*/

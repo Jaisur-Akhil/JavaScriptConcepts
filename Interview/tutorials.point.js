@@ -9,7 +9,7 @@
  * 
  * JavaScript is a client-side and server-side scripting language inserted into HTML pages and is understood by web browsers.
  * ------------
- * JavaScript is a scripting language JavaScript is a lightweight, interpreted programming language with object-oriented capabilities that allows you to build interactivity into otherwise static HTML pages.
+ *
  *
 1. Speed: JavaScript is very fast because it is executed on the client side.
 2. Simplicity: JavaScript is relatively simple and easy to learn.
